@@ -126,8 +126,8 @@ def render_row(label, val_compra, val_assinatura, formula):
     c3.markdown(f"""<div class='res-box'><p class='res-value'>R$ {val_assinatura:,.2f}</p></div>""", unsafe_allow_html=True)
 
 render_row("Patrimônio Líquido", pat_liq_compra, pat_liq_assinatura, f_pat)
-render_row("Gasto Total", (ent + (parc * n) + total_despesas), total_aluguel, f_gas)
-render_row("Custo Mensal Real", custo_mensal_compra, custo_mensal_assinatura, f_mes)
+render_row("Desembolso Total", (ent + (parc * n) + total_despesas), total_aluguel, f_gas)
+render_row("Custo Mensal", custo_mensal_compra, custo_mensal_assinatura, f_mes)
 
 # --- VEREDITO FINAL ---
 vencedor = "ASSINATURA" if custo_mensal_assinatura < custo_mensal_compra else "COMPRA"
